@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.game-container > p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+/* Puzzle Board */
+
+.puzzle-board {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+
+    width: 100%;
+
+    max-width: 360px;
+
+    margin: auto;
+}
+
+.tile {
+    aspect-ratio: 1;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.tile:hover {
+    background: #3730a3;
+}
+
+.empty {
+    background: #e5e7eb;
+
+    cursor: default;
+}
+
+.empty:hover {
+    background: #e5e7eb;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+.buttons button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: #1d4ed8;
+}
+
+#resetBtn {
+    background: #6b7280;
+}
+
+#resetBtn:hover {
+    background: #4b5563;
+}
+
+#message {
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: green;
+}
+
+/* 📱 Mobile Responsive */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .puzzle-board {
+        gap: 6px;
+    }
+
+    .tile {
+        font-size: 18px;
+
+        border-radius: 7px;
+    }
+
+    .buttons button {
+        flex: 1;
+
+        padding: 12px 10px;
+    }
+}
